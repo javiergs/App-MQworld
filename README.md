@@ -1,4 +1,5 @@
-# BrokerVerse — MQTT-Based Multi-User Visualization in Java Swing
+## BrokerVerse
+## MQTT-Based Multi-User Visualization in Java Swing
 
 **BrokerVerse** is a simple Java Swing application that demonstrates real-time communication and shared state synchronization between multiple clients using the **MQTT protocol**.  
 Each instance represents a player that moves around a shared world grid. Player movements are broadcast to all connected instances through a public MQTT broker.
@@ -62,3 +63,8 @@ When a player moves, its coordinates are published via MQTT and displayed by oth
 | `MyKeyListener.java` | Handles arrow-key movement |
 | `MyPublisher.java` | Publishes player state via MQTT |
 | `MySubscriber.java` | Subscribes to MQTT topic and updates the model |
+
+## GUI 
+<img width="912" height="712" alt="Screenshot 2025-11-05 at 9 13 48 PM" src="https://github.com/user-attachments/assets/5560a930-5085-40e4-8f42-44d03872a30e" />
+
+
