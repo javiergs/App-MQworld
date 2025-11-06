@@ -19,7 +19,6 @@ docker run -d --name csc509   -p 6080:6080 -p 3306:3306   mscjaviergs/csc509
 - `6080` → Browser access (noVNC)  
 - `3306` → MariaDB server port  
 
----
 
 ## 🌐 Access the Desktop
 
