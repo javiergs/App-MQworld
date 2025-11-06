@@ -3,6 +3,11 @@
 **BrokerVerse** is a simple Java Swing application that demonstrates real-time communication and shared state synchronization between multiple clients using the **MQTT protocol**.  
 Each instance represents a player that moves around a shared world grid. Player movements are broadcast to all connected instances through a public MQTT broker.
 
+> [!NOTE]
+>
+> Broker | `tcp://broker.hivemq.com:1883` (public)
+>
+
 ## Features
 
 - 🧩 **Publish–Subscribe architecture** via [Eclipse Paho MQTT](https://www.eclipse.org/paho/)
@@ -11,19 +16,6 @@ Each instance represents a player that moves around a shared world grid. Player 
 - ⚙️ Thread-safe **Blackboard** shared-memory model
 - 💬 Clean separation of model (Blackboard), view (WorldPanel), and controllers (Publisher/Subscriber/KeyListener)
 - 🔄 Automatic reconnection and session management
-
-> [!NOTE]
-> Broker | `tcp://broker.hivemq.com:1883` (public)
-
-## Technologies
-
-| Component | Technology |
-|------------|-------------|
-| Language | Java 17+ |
-| Messaging | MQTT (Eclipse Paho) |
-| GUI | Java Swing |
-| Build Tool | Maven |
-| Broker | `tcp://broker.hivemq.com:1883` (public) |
 
 
 ## Running the Application
@@ -36,7 +28,6 @@ git clone https://github.com/<yourusername>/BrokerVerse.git
 cd BrokerVerse
 mvn clean package
 ```
-
 ### 2. Run
 Each instance represents a player. You can launch multiple clients (each with a different ID):
 
@@ -46,7 +37,6 @@ java -jar target/BrokerVerse-1.0.jar two
 java -jar target/BrokerVerse-1.0.jar three
 ...
 ```
-
 Each player will appear in the same virtual grid.  
 When a player moves, its coordinates are published via MQTT and displayed by other connected clients.
 
