@@ -1,0 +1,33 @@
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+/**
+ * Handles keyboard input to move the player.
+ *
+ * @author javiergs
+ * @version 1.0
+ */
+public class MyKeyListener implements KeyListener {
+	
+	@Override
+	public void keyPressed(KeyEvent e) {
+		if (e.getKeyCode() == KeyEvent.VK_UP) {
+			Blackboard.getInstance().up();
+		} else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+			Blackboard.getInstance().down();
+		} else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+			Blackboard.getInstance().left();
+		} else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+			Blackboard.getInstance().right();
+		}
+	}
+	
+	@Override
+	public void keyTyped(java.awt.event.KeyEvent e) {
+	}
+	
+	@Override
+	public void keyReleased(KeyEvent e) {
+	}
+	
+}
