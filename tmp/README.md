@@ -29,7 +29,6 @@ Open your browser and go to:
 
 You’ll see an XFCE desktop session running inside the container.
 
----
 
 ## 💾 Access MariaDB
 
