@@ -56,24 +56,6 @@ mysql -h 127.0.0.1 -P 3306 -u root
 - Basic developer utilities (`curl`, `net-tools`, etc.)
 
 
-## 🧰 For Advanced Users
-
-Stop and remove:
-```bash
-docker stop csc509 && docker rm csc509
-```
-
-View logs:
-```bash
-docker logs -f csc509
-```
-
-Rebuild from source (optional):
-```bash
-docker build -t mscjaviergs/csc509 .
-```
-
-
 ## 👨‍🏫 Instructor Notes
 This container is intended for educational use only.  
 Each student runs it locally and connects via **http://localhost:6080** — no external accounts required.  
