@@ -1,31 +1,38 @@
 #!/bin/bash
-# =====================================
-# Start Ubuntu desktop + MariaDB + noVNC
-# =====================================
 
-# Start the X server (virtual framebuffer)
+# Always use this display
+export DISPLAY=:0
+
+# 1) If a stale X lock exists, remove it
+if [ -f /tmp/.X0-lock ]; then
+  echo "⚠️ Found stale /tmp/.X0-lock, removing..."
+  rm -f /tmp/.X0-lock
+fi
+
+# 2) Start virtual X server
 Xvfb :0 -screen 0 1280x720x16 &
+echo "Xvfb started on :0"
 
-# Start the XFCE desktop
-startxfce4 &
+# 3) Start XFCE desktop (in background)
+startxfce4 >/tmp/xfce.log 2>&1 &
+echo "XFCE started"
 
-# Start the VNC server
-x11vnc -display :0 -rfbport 5900 -forever -shared -nopw &
+# 4) Start VNC server (no password for demo)
+x11vnc -display :0 -rfbport 5900 -forever -shared -nopw >/tmp/x11vnc.log 2>&1 &
+echo "x11vnc started on :0 (port 5900)"
 
-# Start the noVNC server (web access)
-websockify --web=/usr/share/novnc/ 6080 localhost:5900 &
+# 5) Start noVNC (websockify)
+websockify --web=/usr/share/novnc/ 6080 localhost:5900 >/tmp/novnc.log 2>&1 &
+echo "noVNC listening on :6080"
 
-# Start MariaDB
+# 6) Start MariaDB
 service mariadb start
-echo "MariaDB started. Connect with: mysql -u root"
+echo "MariaDB started"
 
-# Information for students
 echo "========================================="
-echo "🖥️  Desktop: http://localhost:6080"
-echo "💾  MariaDB running on port 3306"
-echo "Database: demo"
-echo "User: root (no password)"
+echo "Desktop: http://localhost:6080"
+echo "MariaDB: mysql -u root"
 echo "========================================="
 
-# Keep container alive
+# 7) Keep container alive
 tail -f /dev/null
