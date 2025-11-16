@@ -1,8 +1,11 @@
-## BrokerVerse
-## MQTT-Based Multi-User Visualization in Java Swing
+## **MQWorld: An MQTT-Based Multi-User Visualization in Java Swing**
 
-**BrokerVerse** is a simple Java Swing application that demonstrates real-time communication and shared state synchronization between multiple clients using the **MQTT protocol**.  
-Each instance represents a player that moves around a shared world grid. Player movements are broadcast to all connected instances through a public MQTT broker.
+<p align="center">
+  <img width="512" alt="MQWorld Logo" src="https://github.com/user-attachments/assets/9daa43d3-9c49-4271-8f12-72e9d1bf631b" />
+</p>
+
+**MQWorld** is a lightweight, multi-user 2D virtual space where each client moves across a shared grid in real time using the **MQTT protocol**.  
+Every running instance acts as a player, publishing its position and subscribing to the positions of others. Through a shared MQTT broker, all clients remain synchronized, creating a simple but powerful demonstration of real-time distributed state in Java Swing.
 
 > [!NOTE]
 >
