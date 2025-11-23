@@ -25,12 +25,12 @@ It demonstrates the publish–subscribe pattern using the Eclipse Paho MQTT clie
 
 ## 🕹️ Controls
 
-  Key   Action
-  ----- ------------
-  ↑     Move Up
-  ↓     Move Down
-  ←     Move Left
-  →     Move Right
+| Key | Action     |
+|-----|------------|
+| ↑   | Move Up    |
+| ↓   | Move Down  |
+| ←   | Move Left  |
+| →   | Move Right |
 
 ## 📁 Project Structure
 
