@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * Main application class for the Brokerverse Swing Application.
+ * Main application class for the Swing Application.
  *
  * @author javiergs
  * @version 1.0
@@ -18,7 +18,7 @@ public class Main extends JFrame {
 		worldPanel.setFocusable(true);
 		worldPanel.requestFocusInWindow();
 		Blackboard.getInstance().addPropertyChangeListener(worldPanel);
-
+		
 	}
 	
 	public static void main(String[] args) {
