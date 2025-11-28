@@ -1,8 +1,4 @@
-# MQWorld
-
-**A lightweight multi‑user 2D "shared world" synchronized via MQTT**
-
-This is a simple Java Swing application where multiple instances connect to a shared virtual grid and publish or receive each other’s positions in real time via MQTT.
+A simple Java Swing application where multiple instances connect to a shared virtual grid and publish or receive each other’s positions in real time via MQTT.
 It demonstrates the publish–subscribe pattern using the Eclipse Paho MQTT client library and a public MQTT broker. It also serves as a teaching tool for IoT and network-messaging courses, showing how devices share state through topics. Additionally, it offers a fun testbed for experimentation—change the topic, swap the broker, adjust the visuals, scale the world, or extend the logic however you like.
 
 <p align="center">
