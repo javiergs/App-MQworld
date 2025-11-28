@@ -1,5 +1,5 @@
 <p align="left">
-  <img width="200" alt="MQWorld Logo" src="https://github.com/user-attachments/assets/9daa43d3-9c49-4271-8f12-72e9d1bf631b" />
+  <img width="100" alt="MQWorld Logo" src="https://github.com/user-attachments/assets/9daa43d3-9c49-4271-8f12-72e9d1bf631b" />
 </p>
 
 A simple Java Swing application where multiple instances connect to a shared virtual grid and publish or receive each other’s positions in real time via MQTT.
